@@ -9,6 +9,8 @@ const hbs = require('hbs')
 
 const app= express()
 
+const port = process.env.PORT || 3000
+
 // define path for express config
 
 const publicDipath= path.join(__dirname, '../public') // return the path of index.html
@@ -94,5 +96,5 @@ app.get('*', (req, res) => {
 // })
 
 
-app.listen(3000, () =>{console.log('listening on port 3000')})
+app.listen(port, () =>{console.log('listening on port ' +port )})
 
